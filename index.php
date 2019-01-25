@@ -16,10 +16,22 @@ require_once("config.php");
 //echo json_encode($search);
 
 //carrega uma lista de usuarios usando login e senha
+//$usuario = new Usuario();
+//$usuario->login("jose", "654321");
+//echo $usuario;
+
+//Insere um novo usuario
+//$aluno = new Usuario("aluno2", "bobão");
+//$aluno->insert();
+//echo $aluno;
+
+//Atualizando
 $usuario = new Usuario();
-$usuario->login("jose", "654321");
+
+$usuario->loadbyId(8);
+
+$usuario->update("mestre", "foda");
+
 echo $usuario;
-
-
 
 ?>
